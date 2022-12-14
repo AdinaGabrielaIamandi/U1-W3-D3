@@ -87,6 +87,7 @@
         const title = document.querySelector("h1");
         title.innerText = "NUOVO TITOLO";
       };
+      changeTitle();
 
       /* ESERCIZIO 2
          Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
@@ -96,6 +97,7 @@
         const addClass = document.querySelector("h1");
         addClass.classList.add("myHeading");
       };
+      addClassToTitle();
 
       /* ESERCIZIO 3
          Scrivi una funzione per che cambi il testo dei p figli di un div
@@ -105,6 +107,7 @@
         const textP = document.querySelectorAll("div>p");
         textP.forEach((p) => (p.innerText = "Testo cambiato"));
       };
+      changePcontent();
 
       /* ESERCIZIO 4
          Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
@@ -114,6 +117,7 @@
         const link = document.querySelector("a:not(footer>a)");
         link.href = "https://www.google.com";
       };
+      changeUrls();
 
       /* ESERCIZIO 5
          Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
@@ -125,6 +129,7 @@
         const padre = document.getElementById("secondList");
         padre.appendChild(nuovoElemento);
       };
+      addToTheSecond();
 
       /* ESERCIZIO 6
          Scrivi una funzione che aggiunga un secondo paragrafo al primo div
@@ -136,6 +141,7 @@
         const padreDiv = document.querySelector("div");
         padreDiv.appendChild(nuovoP);
       };
+      addParagraph();
 
       /* ESERCIZIO 7
          Scrivi una funzione che faccia scomparire la prima lista non ordinata
@@ -143,8 +149,9 @@
 
       const hideFirstUl = function () {
         const togliPrimaLista = document.getElementById("firstList");
-        togliPrimaLista.remove("firstList");
+        togliPrimaLista.remove();
       };
+      hideFirstUl();
 
       /* ESERCIZIO 8
          Scrivi una funzione che renda verde il background di ogni lista non ordinata
@@ -154,6 +161,7 @@
         const verde = document.querySelectorAll("ul");
         verde.forEach((li) => (li.style.background = "green"));
       };
+      paintItGreen();
 
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
