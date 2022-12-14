@@ -80,8 +80,8 @@
     </footer>
     <script>
       /* ESERCIZIO 1
-       Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
-    */
+         Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
+      */
 
       const changeTitle = function () {
         const title = document.querySelector("h1");
@@ -89,8 +89,8 @@
       };
 
       /* ESERCIZIO 2
-       Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
-    */
+         Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
+      */
 
       const addClassToTitle = function () {
         const addClass = document.querySelector("h1");
@@ -98,8 +98,8 @@
       };
 
       /* ESERCIZIO 3
-       Scrivi una funzione per che cambi il testo dei p figli di un div
-      */
+         Scrivi una funzione per che cambi il testo dei p figli di un div
+        */
 
       const changePcontent = function () {
         const textP = document.querySelectorAll("p");
@@ -107,8 +107,8 @@
       };
 
       /* ESERCIZIO 4
-       Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
-      */
+         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+        */
 
       const changeUrls = function () {
         const link = document.querySelector("a");
@@ -116,8 +116,8 @@
       };
 
       /* ESERCIZIO 5
-       Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
-    */
+         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
+      */
 
       const addToTheSecond = function () {
         const nuovoElemento = document.createElement("li");
@@ -127,8 +127,8 @@
       };
 
       /* ESERCIZIO 6
-       Scrivi una funzione che aggiunga un secondo paragrafo al primo div
-    */
+         Scrivi una funzione che aggiunga un secondo paragrafo al primo div
+      */
 
       const addParagraph = function () {
         const nuovoP = document.createElement("p");
@@ -138,17 +138,17 @@
       };
 
       /* ESERCIZIO 7
-       Scrivi una funzione che faccia scomparire la prima lista non ordinata
-    */
+         Scrivi una funzione che faccia scomparire la prima lista non ordinata
+      */
 
       const hideFirstUl = function () {
         const togliPrimaLista = document.getElementById("firstList");
         togliPrimaLista.remove("firstList");
       };
 
-      /* ESERCIZIO 8 
-       Scrivi una funzione che renda verde il background di ogni lista non ordinata
-      */
+      /* ESERCIZIO 8
+         Scrivi una funzione che renda verde il background di ogni lista non ordinata
+        */
 
       const paintItGreen = function () {
         const verde = document.querySelectorAll("ul");
@@ -156,23 +156,23 @@
       };
 
       /* ESERCIZIO 9
-       Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
-      */
+         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
+        */
 
       const makeItClickable = function () {
         const canc = document.getElementsByTagName("h1");
       };
 
       /* ESERCIZIO 10
-       Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
-      */
+         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
+        */
 
       const revealFooterLink = function () {};
 
       /* ESERCIZIO 11
-       Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
-       La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
-    */
+         Crea una funzione che crei una tabella nell'elemento con id "tableArea".
+         La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+      */
 
       const generateTable = function () {
         let table = document.createElement("table");
@@ -181,61 +181,57 @@
         table.appendChild(thead);
         table.appendChild(tbody);
         document.getElementById("tableArea").appendChild(table);
+        let row1 = document.createElement("tr");
+        let heading1 = document.createElement("th");
+        heading1.innerText = "Imagine";
+        let heading2 = document.createElement("th");
+        heading2.innerText = "Name Prodotto";
+        let heading3 = document.createElement("th");
+        heading3.innerText = "Quantità";
+        let heading4 = document.createElement("th");
+        heading3.innerText = "Prezzo";
+        row1.appendChild(heading1);
+        row1.appendChild(heading2);
+        row1.appendChild(heading3);
+        row1.appendChild(heading4);
+        thead.appendChild(row1);
+      };
 
-        /* ESERCIZIO 12
-       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-    */
+      /* ESERCIZIO 12
+         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+      */
 
-        const addRow = function () {
-          let row1 = document.createElement("tr");
-          let heading1 = document.createElement("th");
-          heading1.innerText = "Imagine";
-          let heading2 = document.createElement("th");
-          heading2.innerText = "Name Prodotto";
-          let heading3 = document.createElement("th");
-          heading3.innerText = "Quantità";
-          let heading4 = document.createElement("th");
-          heading3.innerText = "Prezzo";
-          row1.appendChild(heading1);
-          row1.appendChild(heading2);
-          row1.appendChild(heading3);
-          row1.appendChild(heading4);
-          thead.appendChild(row1);
-
-          let row2 = document.createElement("tr");
-          let row2_data1 = document.createElement("td");
-          let img1 = new Image();
-          img1.src("img1.png");
-          row2_data1.innerHTML = img1;
-          let row2_data2 = document.createElement("td");
-          row2_data2.innerHTML = "";
-          let row2_data3 = document.createElement("td");
-          row2_data3.innerHTML = "";
-          let row2_data4 = document.createElement("td");
-          row2_data4.innerHTML = "";
-          row2.appendChild(row2_data1);
-          row2.appendChild(row2_data2);
-          row2.appendChild(row2_data3);
-          row2.appendChild(row2_data3);
-          tbody.appendChild(row2);
-        };
+      const addRow = function () {
+        let row2 = document.createElement("tr");
+        let row2_data1 = document.createElement("td");
+        let row2_data2 = document.createElement("td");
+        row2_data2.innerText = "Iphone";
+        let row2_data3 = document.createElement("td");
+        row2_data3.innerText = "10pz";
+        let row2_data4 = document.createElement("td");
+        row2_data4.innerText = "100€";
+        row2.appendChild(row2_data1);
+        row2.appendChild(row2_data2);
+        row2.appendChild(row2_data3);
+        row2.appendChild(row2_data4);
+        tbody.appendChild(row2);
       };
 
       /* ESERCIZIO 14
-      Crea una funzione che nasconda le immagini della tabella quando eseguita
-    */
+        Crea una funzione che nasconda le immagini della tabella quando eseguita
+      */
 
       const hideAllImages = function () {};
 
       /* EXTRA ESERCIZIO 15
-      Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
-    */
+        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+      */
 
       const changeColorWithRandom = function () {};
 
       /* EXTRA ESERCIZIO 16
-      Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
-    */
+        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+      */
 
       const deleteVowels = function () {};
     </script>
