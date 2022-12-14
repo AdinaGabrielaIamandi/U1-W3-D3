@@ -102,7 +102,7 @@
         */
 
       const changePcontent = function () {
-        const textP = document.querySelectorAll("p");
+        const textP = document.querySelectorAll("div>p");
         textP.forEach((p) => (p.innerText = "Testo cambiato"));
       };
 
@@ -111,7 +111,7 @@
         */
 
       const changeUrls = function () {
-        const link = document.querySelector("a");
+        const link = document.querySelector("a:not(footer>a)");
         link.href = "https://www.google.com";
       };
 
@@ -161,6 +161,7 @@
 
       const makeItClickable = function () {
         const canc = document.getElementsByTagName("h1");
+        canc.setAttribute(("onclick".inner.innerText = slice(-1)));
       };
 
       /* ESERCIZIO 10
@@ -177,10 +178,9 @@
       const generateTable = function () {
         let table = document.createElement("table");
         let thead = document.createElement("thead");
-        let tbody = document.createElement("tbody");
+        let padre = document.getElementById("tableArea");
         table.appendChild(thead);
-        table.appendChild(tbody);
-        document.getElementById("tableArea").appendChild(table);
+        padre.appendChild(table);
         let row1 = document.createElement("tr");
         let heading1 = document.createElement("th");
         heading1.innerText = "Imagine";
@@ -202,6 +202,9 @@
       */
 
       const addRow = function () {
+        let tbody = document.createElement("tbody");
+        let padre = document.getElementById("tableArea");
+        padre.appendChild(tbody);
         let row2 = document.createElement("tr");
         let row2_data1 = document.createElement("td");
         let row2_data2 = document.createElement("td");
