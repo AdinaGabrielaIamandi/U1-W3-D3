@@ -169,8 +169,10 @@
 
       const makeItClickable = function () {
         const canc = document.getElementsByTagName("h1");
-        canc.setAttribute(("onclick".inner.innerText = slice(-1)));
+        const text = canc.innerText;
+        text.onclik((element) => element.slice(-1));
       };
+      makeItClickable();
 
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
